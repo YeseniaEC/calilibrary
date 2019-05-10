@@ -1,0 +1,33 @@
+﻿@model  Library.Web.Models.Branch.BranchIndexModel
+
+@{ 
+    ViewBag.Title="Branch Index";
+}
+
+<h3>@ViewBag.Title</h3>
+
+<div id="branchIndex">
+    <table class="table" id="branchIndexTable">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Branch Name</th>
+                <th scope="col">Open Now</th>
+                <th scope="col">Number of Assets</th>
+                <th scope="col">Number of Patrons</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ( var branch in Model.Branches )
+            {
+                <tr>
+                    <td class="strongTd">
+                        <a asp-controller="Branch" asp-action="Detail" asp-route-id="@branch.Id">@branch.Name</a>
+                    </td>
+                    <td>@branch.IsOpen</td>
+                    <td>@branch.NumberOfAssets</td>
+                    <td>@branch.NumberOfPatrons</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
