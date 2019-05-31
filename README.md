@@ -7,4 +7,4 @@
 - Made with Razor Pages using bootstrap
 
 
-Tutorial Source: https://youtu.be/WTVcLFTgDqs 
+Tutorial Source: https://youtu.be/WTVcLFTgDqs  📚 📕
